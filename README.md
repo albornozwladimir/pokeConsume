@@ -1,2 +1,6 @@
 # pokeConsume
-consume pokeApi with JS (2)
+consume pokeApi with JS
+
+## Async-Await fetch
+
+## Axios
