@@ -1,16 +1,33 @@
 const apiPath = "https://pokeapi.co/api/v2/pokemon"
 const imagePath = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon"
 
+let currentPage = 0
 const btnPrevious = document.querySelector("#btnPrevious")
 const btnNext = document.querySelector("#btnNext")
-let currentPage = 0
+const allPokemons = document.querySelector("#content")
 
-const loadPokemons = async() => {
+//Pagination
+btnNext.addEventListener('click', () => {
+	if(currentPage <= 878 ){
+		currentPage += 20
+		loadPokemons()
+	}
+})
+
+btnPrevious.addEventListener('click', () => {
+	if(currentPage >= 20 ){
+		currentPage -= 20
+		loadPokemons()
+	}
+})
+
+const loadPokemons = async () => {
 	try{
-		let answerApi = await fetchingData(`${apiPath}?limit=${currentPage}&offset=${currentPage}`)
+		let answerApi = await fetchingData(`${apiPath}/?limit=20&?&offset=${currentPage}`)
 		if(answerApi.status === 200){
 			//data answer for api
 			let data = await answerApi.json()
+			rebootPage()
 			data.results?.forEach(pokemon => {
 				loadOnePokemon(pokemon)
 			})
@@ -64,19 +81,8 @@ const getPokeImage = (id,div) => {
 	div.append(imageDiv)
 }
 
-//Pagination
-btnNext.addEventListener('click', () => {
-	if(currentPage <= 898 ){
-		currentPage += 20
-		loadPokemons()
-	}
-})
-
-btnPrevious.addEventListener('click', () => {
-	if(currentPage >= 20 ){
-		currentPage -= 20
-		loadPokemons()
-	}
-})
+const rebootPage = () => {
+	allPokemons.innerHTML = ''
+}
 
 loadPokemons()
