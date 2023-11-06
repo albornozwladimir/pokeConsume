@@ -1,8 +1,3 @@
 # pokeConsume
-consume pokeApi with JS
+consume pokeApi (JS or Python)
 
-## Fetch API
-branch async_await
-
-## Axios
-branch axios
