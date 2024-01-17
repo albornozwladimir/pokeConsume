@@ -16,14 +16,11 @@ Para ejecutar este proyecto se necesita:
 - AWS CLI
 - AWS Account
 
-## Instalación
+## Instalación y ejecución
 
 Para instalar las dependencias del proyecto se debe ejecutar:
 
 ```bash
-pipenv install
-npm install
-
 Uso
 Para usar cada una de las ramas se debe seguir los siguientes pasos:
 
