@@ -2,7 +2,7 @@
 
 Este proyecto utiliza la API de Pokemon v2 para crear diferentes soluciones con distintas tecnologías. El proyecto tiene 3 ramas principales, cada una con un enfoque diferente:
 
-- Branch **cdk**: es un AWS CDK construido con Python que permite crear las pilas correspondientes, plantilla de CloudFormation y despliegue de un sitio web que simula ser una **pokedex de Pokemon**. Esta rama demuestra el uso de AWS CDK como herramienta de infraestructura como código y el despliegue automatizado de una solución web. Código base para la publicación de post en dev.to
+- Branch **cdk**: Contiene un proyecto de AWS CDK construido con Python que permite crear las pilas correspondientes, plantilla de CloudFormation y despliegue de un sitio web que simula ser una **pokedex de Pokemon**. Esta rama demuestra el uso de AWS CDK como herramienta de infraestructura como código y el despliegue automatizado de una solución web. Código base para la publicación de post en dev.to
 - Branch **python-api**: contiene una API asincrónica escrita en Python para obtener toda la información de pokemones, sus características y habilidades. Esta rama demuestra el uso de Python como lenguaje de backend y el manejo de peticiones concurrentes.
 - Branch **js-vanilla**: sitio web estático que utiliza JavaScript vanilla para construir el HTML e ir obteniendo con axios la data desde la API de Pokemon. Esta rama demuestra el uso de JavaScript como lenguaje de frontend y el consumo de una API externa.
 
